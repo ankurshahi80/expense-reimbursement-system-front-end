@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -39,3 +40,29 @@ header nav ul li a {
   font-weight: lighter;
   font-size: 22px;
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #153554;
+  width: 100%;
+  padding: 40px 35px;
+
+}
+footer h2 {
+  color: ivory;
+  font-size: 30px;
+  margin: 0;
+}
+
+section {
+  padding: 60px;
+}
+
+.landing-page {
+  background-image: url("../images/landingPage.jpg");
+  background-size: cover;
+  background-position: middle;
+  height: 85vh;
+}
+
