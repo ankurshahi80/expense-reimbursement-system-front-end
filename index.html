@@ -24,18 +24,20 @@
     </nav>
   </header>
   <section class="landing-page">
-    <div>
-      <h2>Login</h2>
-      <form>
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
-        <button type="submit">Login</button>
-      </form>
-    </div>
-    <div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quae, ipsum ea optio aliquam harum soluta fuga enim, laborum, velit ullam doloribus blanditiis exercitationem accusantium.</p>
+    <div class="login-form">
+      <div >
+        <h2>Login</h2>
+        <form>
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" class="login-input">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" class="login-input">
+          <button type="submit">Login</button>
+        </form>
+      </div>
+      <div id="failed-login">
+        <p>Warning message goes here!</p>
+      </div>
     </div>
   </section>
   <footer>

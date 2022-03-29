@@ -64,5 +64,45 @@ section {
   background-size: cover;
   background-position: middle;
   height: 85vh;
+  position: relative;
 }
 
+.login-form {
+  /* border: #2d5986 solid; */
+  padding: 20px;
+  width: 500px;
+  background-color: rgba(240,248,255,0.9);
+  position: absolute;
+  top: 20%;
+  left:10%;
+}
+
+.login-form h2 {
+  padding-bottom: 30px;
+  margin: 0;
+  font-weight: normal;
+  /* font-size: 24px; */
+}
+
+.login-input {
+  display: block;
+  width: 100%;
+  padding: 7px 15px;
+  font-size: 16px;
+  margin-bottom:1rem;
+  border: 1px #153554 solid;
+}
+
+.login-form button {
+  background-color: #153554;
+  color: ivory;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  padding: 7px 0;
+}
+
+#failed-login p {
+  color: red;
+  margin-top: 1rem;
+}
