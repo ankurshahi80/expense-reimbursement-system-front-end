@@ -23,12 +23,15 @@ async function loginFormHandler(event){
       localStorage.setItem("jwt",token);
       
       const user = await res.json();
+      localStorage.setItem('user_id',user.userId);
 
       if(user.userRole === "Manager"){
         document.location.replace("./manager-page.html"); 
-      } else document.location.replace("./emp-page.html")
+      } else document.location.replace("./emp-page.html");
     }else {
-      alert(res.statusText)
+      
+      let failedLogin = document.querySelector("#failed-login p");
+      failedLogin.innerText = await res.text();
     }
   }
 }
