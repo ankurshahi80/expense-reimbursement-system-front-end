@@ -56,7 +56,7 @@ footer h2 {
 }
 
 section {
-  padding: 60px;
+  margin: 60px;
 }
 
 .landing-page {
@@ -67,6 +67,7 @@ section {
   position: relative;
 }
 
+/* Start login form style */
 .login-form {
   /* border: #2d5986 solid; */
   padding: 20px;
@@ -106,6 +107,7 @@ section {
   color: red;
   margin-top: 1rem;
 }
+/* End login form style */
 
 /* Start reimbursement-table style */
 .reimbursement-table {
@@ -135,3 +137,61 @@ section {
 .reimbursement-table tbody tr:last-of-type {
   border-bottom: 2px solid #153554;
 }
+
+/* Start reimbursement-table style */
+
+/* Start new reimbursement form style */
+.reimbursement-form {
+  padding: 20px;
+  width: 500px;
+  background-color: rgba(240,248,255,0.9);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.reimbursement-form h2 {
+  padding-bottom: 30px;
+  margin: 0;
+  font-weight: normal;
+  /* font-size: 24px; */
+}
+
+.reimb-input {
+  display: block;
+  width: 100%;
+  padding: 7px 15px;
+  font-size: 16px;
+  margin-bottom:1rem;
+  border: 1px #153554 solid;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.reimbursement-form button {
+  background-color: #153554;
+  color: ivory;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  padding: 7px 0;
+}
+.reimbursement-form textarea{
+  padding: 10px;
+  display: block;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 100%;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+#failed-submission p {
+  color: red;
+  margin-top: 1rem;
+}
+/* End new reimbursement form style */

@@ -1,6 +1,8 @@
 window.addEventListener('load', (event) =>{
   getAllReimbursements();
 });
+const submitReimbBtnEl = document.querySelector("#submit-reimb-btn");
+submitReimbBtnEl.addEventListener("click",addReimbursement);
 
 async function getAllReimbursements() {
   let empId=localStorage.getItem('user_id');
@@ -15,7 +17,7 @@ async function getAllReimbursements() {
 
   if(res.ok){
     let reimbursements = await res.json();
-    console.log(reimbursements);
+    // console.log(reimbursements);
 
     for (const reimbursement of reimbursements) {
       let trEl = document.createElement('tr');
@@ -58,4 +60,36 @@ async function getAllReimbursements() {
   } else {
     console.log(res.statusText);
   }
+}
+
+async function addReimbursement(event) {
+
+  event.preventDefault();
+
+  const newReimbAmount = document.querySelector("#reimb-amount").value.trim();
+  const newReimbDescription = document.querySelector("#reimb-description").value.trim();
+  const newReimbType = document.querySelector("#reimb-type").value.trim();
+  
+  const formData = new FormData();
+  formData.append("reimbAmount",newReimbAmount);
+  formData.append("reimbDescription",newReimbDescription);
+  formData.append("reimbType",newReimbType);
+
+  let empId=localStorage.getItem('user_id');
+  const URL=`http://localhost:8080/users/${empId}/reimbursements`
+  console.log(newReimbAmount,newReimbDescription,newReimbType,URL)
+  const res = await fetch(URL, {
+    method: 'POST',
+    headers: {
+      'Authorization':`Bearer ${localStorage.getItem('jwt')}`
+    },
+    body: formData
+  })
+
+  if(res.ok){
+    document.location.reload();
+  } else {
+    console.log(res.statusText);
+  }
+
 }
