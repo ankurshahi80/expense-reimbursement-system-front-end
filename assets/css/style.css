@@ -106,3 +106,32 @@ section {
   color: red;
   margin-top: 1rem;
 }
+
+/* Start reimbursement-table style */
+.reimbursement-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9rem;
+  min-width: 800px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.reimbursement-table thead tr {
+  background-color: #153554;
+  color: ivory;
+  text-align: left;
+  font-weight: bold;
+}
+
+.reimbursement-table th,
+.reimbursement-table td {
+  padding: 12px 15px;
+}
+
+.reimbursement-table tbody tr {
+  border-bottom: 1px solid rgba(21, 53, 84,0.5);
+}
+
+.reimbursement-table tbody tr:last-of-type {
+  border-bottom: 2px solid #153554;
+}
