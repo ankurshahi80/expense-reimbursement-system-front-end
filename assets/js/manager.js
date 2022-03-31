@@ -47,6 +47,16 @@ async function getAllReimbursements() {
       let td10 = document.createElement('td');
       td10.innerText = reimbursement.reimbType;
 
+      let tbApprov = document.createElement('button');
+      tbApprov.innerText = "Approve";
+      let td11 = document.createElement('td');
+      td11.appendChild(tbApprov);
+
+      let tbDeny = document.createElement('button');
+      tbDeny.innerText = "Deny";
+      let td12 = document.createElement('td');
+      td12.appendChild(tbDeny);
+
       trEl.appendChild(td1);
       trEl.appendChild(td2);
       trEl.appendChild(td3);
@@ -57,6 +67,8 @@ async function getAllReimbursements() {
       trEl.appendChild(td8);
       trEl.appendChild(td9);
       trEl.appendChild(td10);
+      trEl.appendChild(td11);
+      trEl.appendChild(td12);
       
       let tbody = document.querySelector('#reimbursement-table tbody');
       tbody.appendChild(trEl);
