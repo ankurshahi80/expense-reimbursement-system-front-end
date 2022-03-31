@@ -14,9 +14,16 @@ async function getAllReimbursements() {
 
   if(res.ok){
     let reimbursements = await res.json();
-    console.log(reimbursements);
+    // console.log(reimbursements);
 
     for (const reimbursement of reimbursements) {
+
+      // Format the dates
+      let submissionDate = reimbursement.reimbSubmitted?new Date(reimbursement.reimbSubmitted).toLocaleString():null
+
+      let resolutionDate = reimbursement.reimbResolved?new Date(reimbursement.reimbResolved).toLocaleString():null
+
+
       let trEl = document.createElement('tr');
 
       let td1 = document.createElement('td');
@@ -24,9 +31,9 @@ async function getAllReimbursements() {
       let td2 = document.createElement('td');
       td2.innerText = reimbursement.reimbAmount;
       let td3 = document.createElement('td');
-      td3.innerText = reimbursement.reimbSubmitted;
+      td3.innerText = submissionDate;
       let td4 = document.createElement('td');
-      td4.innerText = reimbursement.reimbResolved;
+      td4.innerText = resolutionDate;
       let td5 = document.createElement('td');
       td5.innerText = reimbursement.reimbDescription;
       let td6 = document.createElement('td');
