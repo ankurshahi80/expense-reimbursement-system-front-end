@@ -2,6 +2,9 @@ window.addEventListener('load', (event) =>{
   getAllReimbursements();
 });
 
+const reimbursementTableEl = document.querySelector("#reimbursement-table");
+const statusSearchEl = document.querySelector("#status-serach");
+
 async function getAllReimbursements() {
   const URL = "http://localhost:8080/reimbursements";
 
@@ -47,15 +50,21 @@ async function getAllReimbursements() {
       let td10 = document.createElement('td');
       td10.innerText = reimbursement.reimbType;
 
-      let tbApprov = document.createElement('button');
-      tbApprov.innerText = "Approve";
+      // create approve button
+      let approveButtonEl = document.createElement('button');
+      approveButtonEl.textContent = "Approve";
+      approveButtonEl.className = "approve-btn";
+      approveButtonEl.setAttribute("data-reimbursement-id",reimbursement.reimbId);
       let td11 = document.createElement('td');
-      td11.appendChild(tbApprov);
+      td11.appendChild(approveButtonEl);
 
-      let tbDeny = document.createElement('button');
-      tbDeny.innerText = "Deny";
+      // create deny button
+      let denyButtonEl = document.createElement('button');
+      denyButtonEl.textContent = "Deny";
+      denyButtonEl.className = "deny-btn";
+      denyButtonEl.setAttribute("data-reimbursement-id",reimbursement.reimbId);
       let td12 = document.createElement('td');
-      td12.appendChild(tbDeny);
+      td12.appendChild(denyButtonEl);
 
       trEl.appendChild(td1);
       trEl.appendChild(td2);
@@ -77,3 +86,51 @@ async function getAllReimbursements() {
     console.log(res.statusText);
   }
 }
+
+function reviewButtonHandler(event) {
+  console.log(event.target);
+  // get target element from event
+  let targetEl = event.target;
+
+  // approve button was clicked
+  if(targetEl.matches(".approve-btn")){
+    // get the element's reimbursement id
+    let reimbId = targetEl.getAttribute("data-reimbursement-id");
+    let reimbDecision = "approved";
+    reimbursementDescision(reimbId, reimbDecision);
+  }
+  // deny button was clicked
+  else if(targetEl.matches(".deny-btn")){
+    let reimbId = targetEl.getAttribute("data-reimbursement-id");
+    let reimbDecision = "denied";
+    reimbursementDescision(reimbId,reimbDecision);
+  }
+}
+
+async function reimbursementDescision(reimbId, reimbDecision) {
+  console.log("approve" + reimbId);
+
+  // let empId=localStorage.getItem('user_id');
+  const URL=`http://localhost:8080/reimbursements/${reimbId}`
+  console.log(URL)
+  const res = await fetch(URL, {
+    method: 'PATCH',
+    headers: {
+      'Authorization':`Bearer ${localStorage.getItem('jwt')}`
+    },
+    body: reimbDecision
+  })
+
+  if(res.ok){
+    document.location.reload();
+  } else {
+    console.log(res.statusText);
+  }
+}
+
+async function denyReimbursement(reimbId) {
+  console.log("deny" + reimbId);
+} 
+
+
+reimbursementTableEl.addEventListener("click",reviewButtonHandler);

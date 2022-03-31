@@ -33,6 +33,16 @@
       <h2>
         Reimbursements Requests
       </h2>
+      <div>
+        <label for="status-select">Search reimbursements</label>
+
+        <select name="status-select" id="status-select">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="approved">Approved</option>
+            <option value="denied">Denied</option>
+        </select>
+      </div>
       <div class="table-overflow-wrapper">
         <table id="reimbursement-table" class="reimbursement-table">
           <thead>
