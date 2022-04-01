@@ -3,11 +3,11 @@ window.addEventListener('load', (event) =>{
 });
 
 const reimbursementTableEl = document.querySelector("#reimbursement-table");
-const statusSearchEl = document.querySelector("#status-serach");
+const statusSearchEl = document.querySelector("#status-search");
 
 async function getAllReimbursements() {
   const URL = "http://localhost:8080/reimbursements";
-
+  
   const res = await fetch(URL, {
     method: 'GET',
     headers: {
@@ -17,10 +17,10 @@ async function getAllReimbursements() {
 
   if(res.ok){
     let reimbursements = await res.json();
-    // console.log(reimbursements);
+    
 
     for (const reimbursement of reimbursements) {
-
+      
       // Format the dates
       let submissionDate = reimbursement.reimbSubmitted?new Date(reimbursement.reimbSubmitted).toLocaleString():null
 
@@ -128,10 +128,34 @@ async function reimbursementDescision(reimbId, reimbDecision) {
   }
 }
 
-async function denyReimbursement(reimbId) {
-  console.log("deny" + reimbId);
-} 
+function filterResults(event){
+  
+  let txtValue;
+  let tr = reimbursementTableEl.getElementsByTagName('tr');
+  console.log(tr);
 
+  let th=reimbursementTableEl.getElementsByTagName('th');
+  console.log(th.length, th.item(8).innerText);
+  
+  let reimbFilterChoice = event.target.value;
+  console.log(reimbFilterChoice);
+
+  if(reimbFilterChoice === "all") {
+    document.location.reload();
+  } else {
+    for (let index = 0; index < tr.length; index++) {
+      const element = tr[index].getElementsByTagName('td')[8];
+      if(element) {
+        txtValue = element.textContent
+        if(txtValue.indexOf(reimbFilterChoice) > -1){
+          tr[index].style.display="";
+        } else {
+          tr[index].style.display="none";
+        }
+      }
+    }
+  }
+}
 
 reimbursementTableEl.addEventListener("click",reviewButtonHandler);
-statusSearchEl.addEventListener("")
+statusSearchEl.addEventListener("change",filterResults);
