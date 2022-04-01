@@ -65,6 +65,7 @@ section {
   background-position: middle;
   height: 85vh;
   position: relative;
+  margin: 0;
 }
 
 /* Start login form style */
