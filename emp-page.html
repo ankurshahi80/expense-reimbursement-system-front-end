@@ -59,7 +59,7 @@
         <h2>Submit New Reimbursement Request</h2>
         <form >
             <label for="reimb-amount">Amount</label>
-            <input type="number" name="reimb-amount" id="reimb-amount" class="reimb-input">
+            <input type="number" name="reimb-amount" id="reimb-amount" class="reimb-input" min="0" max="500">
             <label for="reimb-type">Choose your reimbursement type:</label>
             <select name="reimb-type" id="reimb-type" class="reimb-input">
               <option value="">--Please choose an option--</option>
@@ -70,6 +70,8 @@
             </select>
             <label for="reimb-description">Description</label>
             <textarea name="reimb-description" id="reimb-description" rows="2"></textarea>
+            <label for="reimb-receipt">Reimbursement Receipt (PNG, GIF or JPEG only)</label>
+            <input type="file" name="reimb-receipt" id="reimb-receipt" class="reimb-input" style="border: transparent; padding-left: 0;">
           <button type="submit" id="submit-reimb-btn">Submit</button>
         </form>
       </div>

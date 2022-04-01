@@ -76,11 +76,15 @@ async function addReimbursement(event) {
   const newReimbAmount = document.querySelector("#reimb-amount").value.trim();
   const newReimbDescription = document.querySelector("#reimb-description").value.trim();
   const newReimbType = document.querySelector("#reimb-type").value.trim();
+  const newReimbReceipt = document.querySelector("#reimb-receipt").files[0];
   
   const formData = new FormData();
   formData.append("reimbAmount",newReimbAmount);
   formData.append("reimbDescription",newReimbDescription);
   formData.append("reimbType",newReimbType);
+  formData.append("reimbReceipt",newReimbReceipt);
+
+  console.log(formData);
 
   let empId=localStorage.getItem('user_id');
   const URL=`http://localhost:8080/users/${empId}/reimbursements`

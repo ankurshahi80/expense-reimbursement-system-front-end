@@ -102,6 +102,7 @@ section {
   border: none;
   font-size: 1rem;
   padding: 7px 0;
+  cursor: pointer;
 }
 
 #failed-login p {
@@ -203,6 +204,7 @@ input[type=number] {
   border: none;
   font-size: 1rem;
   padding: 7px 0;
+  cursor: pointer;
 }
 .reimbursement-form textarea{
   padding: 10px;
