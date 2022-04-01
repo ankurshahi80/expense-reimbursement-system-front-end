@@ -130,19 +130,17 @@ async function reimbursementDescision(reimbId, reimbDecision) {
 
 function filterResults(event){
   
+  // Declare variables
   let txtValue;
   let tr = reimbursementTableEl.getElementsByTagName('tr');
-  console.log(tr);
-
   let th=reimbursementTableEl.getElementsByTagName('th');
-  console.log(th.length, th.item(8).innerText);
-  
   let reimbFilterChoice = event.target.value;
-  console.log(reimbFilterChoice);
-
+  
+  // Reload the page to dispaly all the reimbursements
   if(reimbFilterChoice === "all") {
     document.location.reload();
   } else {
+    // Loop through all table rows, and hide those who don't match the filter criteria
     for (let index = 0; index < tr.length; index++) {
       const element = tr[index].getElementsByTagName('td')[8];
       if(element) {
