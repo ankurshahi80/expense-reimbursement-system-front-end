@@ -154,6 +154,13 @@ section {
   cursor:pointer;
 }
 
+.resolved {
+  background-color: #f3f3f3;
+}
+
+.resolved button {
+  cursor: not-allowed;
+}
 /* Start reimbursement-table style */
 
 /* Start new reimbursement form style */

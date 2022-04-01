@@ -26,6 +26,8 @@ async function getAllReimbursements() {
 
       let resolutionDate = reimbursement.reimbResolved?new Date(reimbursement.reimbResolved).toLocaleString():null
 
+      let resolved = (reimbursement.reimbStatus === "Approved" || reimbursement.reimbStatus === "Denied");
+
 
       let trEl = document.createElement('tr');
 
@@ -55,6 +57,7 @@ async function getAllReimbursements() {
       approveButtonEl.textContent = "Approve";
       approveButtonEl.className = "approve-btn";
       approveButtonEl.setAttribute("data-reimbursement-id",reimbursement.reimbId);
+      if(resolved) approveButtonEl.disabled = true;
       let td11 = document.createElement('td');
       td11.appendChild(approveButtonEl);
 
@@ -63,6 +66,7 @@ async function getAllReimbursements() {
       denyButtonEl.textContent = "Deny";
       denyButtonEl.className = "deny-btn";
       denyButtonEl.setAttribute("data-reimbursement-id",reimbursement.reimbId);
+      if(resolved) denyButtonEl.disabled = true;
       let td12 = document.createElement('td');
       td12.appendChild(denyButtonEl);
 
@@ -79,6 +83,8 @@ async function getAllReimbursements() {
       trEl.appendChild(td11);
       trEl.appendChild(td12);
       
+      if(resolved) trEl.classList.add("resolved");
+
       let tbody = document.querySelector('#reimbursement-table tbody');
       tbody.appendChild(trEl);
     }
