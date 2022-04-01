@@ -41,8 +41,22 @@ async function getAllReimbursements() {
       td4.innerText = resolutionDate;
       let td5 = document.createElement('td');
       td5.innerText = reimbursement.reimbDescription;
+      // // create image button
+      // let imageButtonEl = document.createElement('button');
+      // imageButtonEl.textContent = "View Copy";
+      // imageButtonEl.className = "image-btn";
+      // imageButtonEl.setAttribute("data-reimbursement-id",reimbursement.reimbId);
+      // let td6 = document.createElement('td');
+      // td6.appendChild(imageButtonEl);
+      let imagelinkEl = document.createElement('a');
+      imagelinkEl.setAttribute("href",`http://localhost:8080/reimbursements/${reimbursement.reimbId}/image`);
+      imagelinkEl.setAttribute("target","_blank");
+      imagelinkEl.innerText="View Copy";
+      imagelinkEl.style.textDecoration = "none";
+      imagelinkEl.style.color="#2d5986";
       let td6 = document.createElement('td');
-      td6.innerText = reimbursement.reimbReceipt;  
+      td6.appendChild(imagelinkEl);
+      // td6.innerText = reimbursement.reimbReceipt;  
       let td7 = document.createElement('td');
       td7.innerText = reimbursement.reimbAuthor;
       let td8 = document.createElement('td');
@@ -92,6 +106,7 @@ async function getAllReimbursements() {
     console.log(res.statusText);
   }
 }
+
 
 function reviewButtonHandler(event) {
   console.log(event.target);

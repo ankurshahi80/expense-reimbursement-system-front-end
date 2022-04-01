@@ -39,8 +39,15 @@ async function getAllReimbursements() {
       td4.innerText = resolutionDate;
       let td5 = document.createElement('td');
       td5.innerText = reimbursement.reimbDescription;
+      // create image button
+      let imagelinkEl = document.createElement('a');
+      imagelinkEl.setAttribute("href",`http://localhost:8080/reimbursements/${reimbursement.reimbId}/image`);
+      imagelinkEl.setAttribute("target","_blank");
+      imagelinkEl.innerText="View Copy";
+      imagelinkEl.style.textDecoration = "none";
+      imagelinkEl.style.color="#2d5986";
       let td6 = document.createElement('td');
-      td6.innerText = reimbursement.reimbReceipt;  
+      td6.appendChild(imagelinkEl);
       let td7 = document.createElement('td');
       td7.innerText = reimbursement.reimbAuthor;
       let td8 = document.createElement('td');
