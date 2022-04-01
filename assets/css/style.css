@@ -112,11 +112,12 @@ section {
 /* Start reimbursement-table style */
 .table-overflow-wrapper {
   overflow-x: auto;
+  margin: 25px 0;
 }
 
 .reimbursement-table {
   border-collapse: collapse;
-  margin: 25px 0;
+  /* margin: 25px 0; */
   font-size: 0.9rem;
   min-width: 800px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -209,3 +210,10 @@ input[type=number] {
   margin-top: 1rem;
 }
 /* End new reimbursement form style */
+
+#status-search {
+  margin-top:20px;
+  padding: 7px 15px;
+  font-size: 1rem;
+  border: 1px #153554 solid;
+}
