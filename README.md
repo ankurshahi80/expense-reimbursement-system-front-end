@@ -58,7 +58,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
         3. Click the user agreement and scroll to the bottom, then check the box accepting the agreement.
         4. Sign in to your Oracle account.
         5. Run the install file.
-        6. On the first setup page, click Install, as shown in the following image:  
+        6. On the first setup page, click Install, as shown in the following image:
         <img height="200" alt="image" src="https://user-images.githubusercontent.com/79622822/163215367-dd559968-d995-4a0d-9da2-0abe858a6745.png">
         7. Select the install path and click next.
         8. On the "Change in License Terms" page, click OK.
