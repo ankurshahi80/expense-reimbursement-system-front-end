@@ -67,6 +67,32 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 
 
   - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+    - Install the IntelliJ IDEA Community Edition for macOS
+      - Install IntelliJ IDEA to use as your code editor. Complete the following steps:
+        1. Navigate to the [IntelliJ IDEA download page](https://www.jetbrains.com/idea/download/#section=mac).
+        2. Download the Community Edition for macOS.
+        3. Run the disk image file after it downloads.
+        4. In the Finder window that pops up, drag the IntelliJ IDEA CE icon into your Applications folder, as shown in the following image:
+        ![image](https://user-images.githubusercontent.com/79622822/163222348-0415bc97-8807-42bd-912e-61b384e792d9.png)
+        5. In the Applications folder, open IntelliJ in Launchpad.
+        6. Click Open when prompted to open a third-party app downloaded from the internet.
+        7. When prompted to import IntelliJ settings from a config or installation folder, choose the default "Do not import settings" option and click OK.
+        8. The next step is left to your own discretion! You can either choose to send usage statistics or choose the "Don't send" option to keep from sharing data.
+        9. Next you’ll be prompted to customize IntelliJ IDEA. You can choose to "Skip remaining and set defaults", or you can click through (to set the theme and so on) until you reach the "Start Using IntelliJ" button.
+        10. Don't forget to eject the install drive and delete the IntelliJ IDEA disk image from your Downloads folder after successful installation.
+    - Install the IntelliJ IDEA for Windows
+      - Install IntelliJ IDEA to use as your code editor. Complete the following steps:
+        1. Navigate to the [IntelliJ IDEA download page](https://www.jetbrains.com/idea/download/#section=windows).
+        2. Download the Community Edition
+        3. Run the install file.
+        4. On the first setup page, choose Next.
+        5. Select the destination folder and click Next.
+        6. Mark the "Update PATH variable option", create the ".java" association, and click Next.
+        7. Click Install.
+        8. Choose your preferred option for when to reboot.
+        9. Once you've, rebooted, launch IntelliJ.
+        10. Accept the Privacy Policy and continue.
+        11. The final step is left to your discretion. You can either choose to send usage statistics or choose the "Don't send" option to keep from sharing data.
 4. Run `npm install` command.
 5. Install and run PlanetRank backend code to start the server 
 6. Run `ng serve` command.
