@@ -48,8 +48,8 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
         11. When the installation is complete, you should see a message that says, "The software was successfully installed."
         12. You'll be automatically directed to the Summary Section, which means that you've successfully installed Java!
         13. Click the close button, and select "Move to Trash" for the installation files.
-        14. Open Terminal and run the command `java -version` to check that the installation completed successfully. You can also verify this by opening System Preferences and looking for a Java icon there, as shown in the following image:
-        ![image](https://user-images.githubusercontent.com/79622822/163214046-56d0c809-279a-4f7c-9413-18f3db588cc6.png)  
+        14. Open Terminal and run the command `java -version` to check that the installation completed successfully. You can also verify this by opening System Preferences and looking for a Java icon there, as shown in the following image:  
+        <img height="200" alt="image" src="https://user-images.githubusercontent.com/79622822/163214046-56d0c809-279a-4f7c-9413-18f3db588cc6.png">
 
     - Install the JDK on Windows
       - First you must [create an Oracle account](https://docs.oracle.com/en/cloud/get-started/subscriptions-cloud/csgsg/get-oracle-com-account.html). When you have an account with Oracle, complete the following steps.
@@ -58,8 +58,8 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
         3. Click the user agreement and scroll to the bottom, then check the box accepting the agreement.
         4. Sign in to your Oracle account.
         5. Run the install file.
-        6. On the first setup page, click Install, as shown in the following image:
-        ![image](https://user-images.githubusercontent.com/79622822/163215367-dd559968-d995-4a0d-9da2-0abe858a6745.png)
+        6. On the first setup page, click Install, as shown in the following image:  
+        <img height="200" alt="image" src="https://user-images.githubusercontent.com/79622822/163215367-dd559968-d995-4a0d-9da2-0abe858a6745.png">
         7. Select the install path and click next.
         8. On the "Change in License Terms" page, click OK.
         9. Once again, choose the installation directory.
@@ -71,8 +71,8 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
         1. Navigate to the [IntelliJ IDEA download page](https://www.jetbrains.com/idea/download/#section=mac).
         2. Download the Community Edition for macOS.
         3. Run the disk image file after it downloads.
-        4. In the Finder window that pops up, drag the IntelliJ IDEA CE icon into your Applications folder, as shown in the following image:
-        ![image](https://user-images.githubusercontent.com/79622822/163222348-0415bc97-8807-42bd-912e-61b384e792d9.png)
+        4. In the Finder window that pops up, drag the IntelliJ IDEA CE icon into your Applications folder, as shown in the following image:  
+        <img height="200" alt="image" src="https://user-images.githubusercontent.com/79622822/163222348-0415bc97-8807-42bd-912e-61b384e792d9.png">
         5. In the Applications folder, open IntelliJ in Launchpad.
         6. Click Open when prompted to open a third-party app downloaded from the internet.
         7. When prompted to import IntelliJ settings from a config or installation folder, choose the default "Do not import settings" option and click OK.
@@ -120,12 +120,12 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
       5. Complete the rest of the installation process.
 5. Set up the ers database
     1. Launch DBeaver.
-    2. Create ers Schema in postgres database as shown below:
+    2. Create ers Schema in postgres database as shown below:  
       <img width="400" alt="image" src="https://user-images.githubusercontent.com/79622822/163238822-afd304d2-f021-472a-aefa-a9600b733812.png">
     3. Run the [SQL script] within the ers schema
       ![image](https://user-images.githubusercontent.com/79622822/163239603-59b2ff3c-0ef1-4e78-9ae0-5b4bfb5aeb79.png)
     4. Refresh the Schema to confirm that you have the ers tables created correctly.
-5. Run the back-end repo uning IntelliJ
+6. Run the back-end repo uning IntelliJ
     1. Launch IntelliJ.
     2. On the Welcome page, select Open.
     3. Navigate to your folder and open the back-end repo.
@@ -140,14 +140,14 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
     `db_password=<your-password>`
     9. Click Apply to save the changes. Relaunch the IntelliJ to ensure the changes are saved.
     10. Navgate back to the Driver class and click on the play icon to Run the main method. The main method will start your server.
-5. Run the front-end repo using VS Code
+7. Run the front-end repo using VS Code
     1. Launch VS Code.
     2. Go to File menu, select Open Folder.
     3. Navigate to your folder and open the front-end repo.
     5. Select index.html
     6. Right click and select Open in Other Browser, then select Google Chrome to launch the application
     ![image](https://user-images.githubusercontent.com/79622822/163244492-cfc08d29-59c1-4b2c-b259-13e0683d6233.png)
-6. Use the following credentials to explore the system
+8. Use the following credentials to explore the system
     - Manager
       - username: johndoe
       - password: test123
