@@ -59,7 +59,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
         4. Sign in to your Oracle account.
         5. Run the install file.
         6. On the first setup page, click Install, as shown in the following image:
-          <img height="200" alt="image" src="https://user-images.githubusercontent.com/79622822/163215367-dd559968-d995-4a0d-9da2-0abe858a6745.png">
+          ![image](https://user-images.githubusercontent.com/79622822/163215367-dd559968-d995-4a0d-9da2-0abe858a6745.png)
         7. Select the install path and click next.
         8. On the "Change in License Terms" page, click OK.
         9. Once again, choose the installation directory.
@@ -72,7 +72,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
         2. Download the Community Edition for macOS.
         3. Run the disk image file after it downloads.
         4. In the Finder window that pops up, drag the IntelliJ IDEA CE icon into your Applications folder, as shown in the following image:  
-        <img height="200" alt="image" src="https://user-images.githubusercontent.com/79622822/163222348-0415bc97-8807-42bd-912e-61b384e792d9.png">
+        ![image](https://user-images.githubusercontent.com/79622822/163222348-0415bc97-8807-42bd-912e-61b384e792d9.png)
         5. In the Applications folder, open IntelliJ in Launchpad.
         6. Click Open when prompted to open a third-party app downloaded from the internet.
         7. When prompted to import IntelliJ settings from a config or installation folder, choose the default "Do not import settings" option and click OK.
@@ -98,7 +98,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
       2. Extract the contents of the ZIP file, and save it in a new folder called "gradle-7.4"
       3. Update the environment variables
         1. Search "edit the system environment variables" in Windows search box and select the corresponding option.  
-        <img height="400" alt="image" src="https://user-images.githubusercontent.com/79622822/163230802-03ad8a29-6867-431a-8404-284384ec4c1e.png">
+        ![image](https://user-images.githubusercontent.com/79622822/163230802-03ad8a29-6867-431a-8404-284384ec4c1e.png)
         2. Select Environment Variables
         3. Find the path variable, select it and click edit. Add the path to the bin folder of the gradle folder.
         4. Open command line and type `gradle - version` to verify if you have successfully setup Gradle on your computer.
@@ -121,7 +121,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 5. Set up the ers database
     1. Launch DBeaver.
     2. Create ers Schema in postgres database as shown below:  
-      <img width="400" alt="image" src="https://user-images.githubusercontent.com/79622822/163238822-afd304d2-f021-472a-aefa-a9600b733812.png">
+      ![image](https://user-images.githubusercontent.com/79622822/163238822-afd304d2-f021-472a-aefa-a9600b733812.png)
     3. Run the [SQL script] within the ers schema
       ![image](https://user-images.githubusercontent.com/79622822/163239603-59b2ff3c-0ef1-4e78-9ae0-5b4bfb5aeb79.png)
     4. Refresh the Schema to confirm that you have the ers tables created correctly.
@@ -133,7 +133,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
     5. In the Project pane, go to build.gradle and click on the refresh icon to load all dependecies.
     6. Navigate to src/main/java/com.revature/main/Driver class
     7. Right click, then select Modify Run Configuration
-      <img width="400" alt="image" src="https://user-images.githubusercontent.com/79622822/163242072-c285762e-1701-426b-aa0e-ed7f132e8c16.png">
+      ![image](https://user-images.githubusercontent.com/79622822/163242072-c285762e-1701-426b-aa0e-ed7f132e8c16.png)
     8. Add the following Environment variables:  
     `db_url=jdbc:postgresql://localhost:5432/postgres?currentSchema=ers;`  
     `db_username=postgres;`  
